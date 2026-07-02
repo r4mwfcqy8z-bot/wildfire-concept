@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Work — Wildfire</title>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Selected work from Wildfire — brands across retail, healthcare, technology and finance."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="ribbon">Concept redesign for <b>Wildfire</b> — a proposed direction. Not the current wildfireideas.com.</div>
+<header class="nav"><div class="container">
+  <a class="brand" href="index.html"><span class="spark"></span>Wildfire</a>
+  <nav class="nav-links">
+    <a href="work.html" class="active">Work</a>
+    <a href="services.html">Services</a>
+    <a href="culture.html">Culture</a>
+    <a href="careers.html">Careers</a>
+    <a href="news.html">News</a>
+  </nav>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+</div></header>
+<div class="mobile-nav">
+  <a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+</div>
+
+<section class="phero"><div class="container">
+  <span class="eyebrow">Selected work</span>
+  <h1 class="display">Brands we've<br/><span class="grad-text">helped ignite.</span></h1>
+  <p>From national names to hometown favorites, here's a look at the partners who trust us with their brand.</p>
+</div></section>
+
+<section class="section" style="padding-top:20px"><div class="container">
+  <div class="work-grid">
+    <a class="work-card wc1 reveal" href="contact.html"><span class="cat">Retail · Experiential</span><h3>Lowe's Foods</h3><p>A community grocery brand brought to life across store, screen and street.</p></a>
+    <a class="work-card wc2 reveal" href="contact.html"><span class="cat">Technology · Interactive</span><h3>Red Hat</h3><p>Enterprise technology made human through clear, confident digital storytelling.</p></a>
+    <a class="work-card wc3 reveal" href="contact.html"><span class="cat">Healthcare · Brand</span><h3>Wake Forest Baptist Health</h3><p>Trusted care, communicated with warmth and clarity at every touchpoint.</p></a>
+    <a class="work-card wc4 reveal" href="contact.html"><span class="cat">Finance · Campaign</span><h3>Truliant</h3><p>A member-first financial brand with a campaign built on real people.</p></a>
+    <a class="work-card wc2 reveal" href="contact.html"><span class="cat">CPG · Creative</span><h3>Green Mountain Gringo</h3><p>Bold packaging and content that made a salsa brand impossible to ignore.</p></a>
+    <a class="work-card wc1 reveal" href="contact.html"><span class="cat">Apparel · Brand</span><h3>Champion</h3><p>Heritage athletic energy translated for a new generation of fans.</p></a>
+  </div>
+</div></section>
+
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">In good company</span><h2>Trusted by brands big and small.</h2></div>
+  <div class="wall">
+    <div class="cell">Coca-Cola</div><div class="cell">Hanes</div><div class="cell">Red Hat</div><div class="cell">Lowe's Foods</div>
+    <div class="cell">Advance Auto</div><div class="cell">Truliant</div><div class="cell">Lumos</div><div class="cell">Champion</div>
+    <div class="cell">Nutrafol</div><div class="cell">True Botanicals</div><div class="cell">Guilford College</div><div class="cell">Charleys</div>
+    <div class="cell">Wake Forest Baptist</div><div class="cell">Brenner Children's</div><div class="cell">Green Mountain Gringo</div><div class="cell">DDS Companies</div>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="container">
+  <h2 class="display">Your brand could be<br/>next on this wall.</h2>
+  <a class="btn" href="contact.html">Start a project →</a>
+</div></section>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div class="foot-brand"><div class="display grad-text">Wildfire</div><p class="muted" style="max-width:36ch">Full of ideas, not egos. A full-service creative agency in Winston-Salem &amp; Richmond.</p></div>
+    <div class="foot-col"><h4>Explore</h4><a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a></div>
+    <div class="foot-col"><h4>Offices</h4><a href="contact.html">Winston-Salem, NC</a><a href="contact.html">Richmond, VA</a><a href="tel:3367773473">336.777.FIRE</a><a href="contact.html">Start a project →</a></div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Wildfire, LLC · Concept redesign</span><span>Winston-Salem · Richmond</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var mb=document.querySelector('.menu-btn');
+  if(mb)mb.addEventListener('click',function(){document.body.classList.toggle('menu-open');mb.textContent=document.body.classList.contains('menu-open')?'Close':'Menu';});
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');if(mb)mb.textContent='Menu';});});
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

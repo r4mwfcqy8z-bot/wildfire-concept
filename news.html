@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>News — Wildfire</title>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Ideas, insights and announcements from the Wildfire team."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="ribbon">Concept redesign for <b>Wildfire</b> — a proposed direction. Not the current wildfireideas.com.</div>
+<header class="nav"><div class="container">
+  <a class="brand" href="index.html"><span class="spark"></span>Wildfire</a>
+  <nav class="nav-links">
+    <a href="work.html">Work</a>
+    <a href="services.html">Services</a>
+    <a href="culture.html">Culture</a>
+    <a href="careers.html">Careers</a>
+    <a href="news.html" class="active">News</a>
+  </nav>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+</div></header>
+<div class="mobile-nav">
+  <a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+</div>
+
+<section class="phero"><div class="container">
+  <span class="eyebrow">Ideas &amp; insights</span>
+  <h1 class="display">News from<br/><span class="grad-text">the fire.</span></h1>
+  <p>What we're thinking about, learning, and shipping. Straight from the team.</p>
+</div></section>
+
+<section class="section" style="padding-top:20px"><div class="container">
+  <div class="posts reveal">
+    <a class="post" href="contact.html"><div><div class="pcat">Strategy</div><h3>Is it time to redesign your business website?</h3></div><span class="arrow">→</span></a>
+    <a class="post" href="contact.html"><div><div class="pcat">Creative</div><h3>Why the best idea rarely comes from the loudest voice</h3></div><span class="arrow">→</span></a>
+    <a class="post" href="contact.html"><div><div class="pcat">Interactive</div><h3>Building brands for the devices people actually live on</h3></div><span class="arrow">→</span></a>
+    <a class="post" href="contact.html"><div><div class="pcat">Media</div><h3>Right person, right message, right time: media that earns attention</h3></div><span class="arrow">→</span></a>
+    <a class="post" href="contact.html"><div><div class="pcat">SEO</div><h3>Compounding traffic: the long game of local search</h3></div><span class="arrow">→</span></a>
+    <a class="post" href="contact.html"><div><div class="pcat">Culture</div><h3>What "no egos" really means when the deadline is Friday</h3></div><span class="arrow">→</span></a>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="container">
+  <h2 class="display">Got a project<br/>brewing?</h2>
+  <a class="btn" href="contact.html">Start a project →</a>
+</div></section>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div class="foot-brand"><div class="display grad-text">Wildfire</div><p class="muted" style="max-width:36ch">Full of ideas, not egos. A full-service creative agency in Winston-Salem &amp; Richmond.</p></div>
+    <div class="foot-col"><h4>Explore</h4><a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a></div>
+    <div class="foot-col"><h4>Offices</h4><a href="contact.html">Winston-Salem, NC</a><a href="contact.html">Richmond, VA</a><a href="tel:3367773473">336.777.FIRE</a><a href="contact.html">Start a project →</a></div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Wildfire, LLC · Concept redesign</span><span>Winston-Salem · Richmond</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var mb=document.querySelector('.menu-btn');
+  if(mb)mb.addEventListener('click',function(){document.body.classList.toggle('menu-open');mb.textContent=document.body.classList.contains('menu-open')?'Close':'Menu';});
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');if(mb)mb.textContent='Menu';});});
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

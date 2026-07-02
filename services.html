@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Services — Wildfire</title>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="Strategy, creative, interactive, media, experiential and SEO — six capabilities under one roof."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="ribbon">Concept redesign for <b>Wildfire</b> — a proposed direction. Not the current wildfireideas.com.</div>
+<header class="nav"><div class="container">
+  <a class="brand" href="index.html"><span class="spark"></span>Wildfire</a>
+  <nav class="nav-links">
+    <a href="work.html">Work</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="culture.html">Culture</a>
+    <a href="careers.html">Careers</a>
+    <a href="news.html">News</a>
+  </nav>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+</div></header>
+<div class="mobile-nav">
+  <a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+</div>
+
+<section class="phero"><div class="container">
+  <span class="eyebrow">What we do</span>
+  <h1 class="display">Six capabilities.<br/><span class="grad-text">One team.</span></h1>
+  <p>Strategy through execution, under one roof. No handoffs, no egos. Just a team that owns the outcome with you.</p>
+</div></section>
+
+<section class="section" style="padding-top:20px"><div class="container">
+  <div class="grid cols-2">
+    <div class="svc reveal">
+      <h3>Strategy</h3>
+      <p>Creating, evolving, crystalizing and communicating your brand strategy, grounded in research and real consumer insight rather than guesswork.</p>
+      <p class="dim" style="margin-top:14px;font-size:13px">Brand strategy · Research &amp; insights · Positioning · Naming &amp; architecture</p>
+    </div>
+    <div class="svc reveal">
+      <h3>Creative</h3>
+      <p>Amplifying your brand through impactful, commerce-based creative solutions that cut through the chaos and get remembered.</p>
+      <p class="dim" style="margin-top:14px;font-size:13px">Identity &amp; design · Campaigns · Content · Video &amp; motion</p>
+    </div>
+    <div class="svc reveal">
+      <h3>Interactive</h3>
+      <p>Seamlessly engaging your customers on the digital devices where they live, work and play: from site to app to social.</p>
+      <p class="dim" style="margin-top:14px;font-size:13px">Web design &amp; build · UX/UI · Social · Email &amp; CRM</p>
+    </div>
+    <div class="svc reveal">
+      <h3>Media</h3>
+      <p>Motivating the right person with the right message, at the right time, using the right medium. Planned, measured and optimized.</p>
+      <p class="dim" style="margin-top:14px;font-size:13px">Media planning &amp; buying · Paid social · Programmatic · Analytics</p>
+    </div>
+    <div class="svc reveal">
+      <h3>Experiential</h3>
+      <p>Fueling meaningful relationships through immersive experiences your customers won't soon forget, whether in-store, on-site, or out in the world.</p>
+      <p class="dim" style="margin-top:14px;font-size:13px">Events &amp; activations · Environments · Sponsorships · Retail</p>
+    </div>
+    <div class="svc reveal">
+      <h3>Search Engine Optimization</h3>
+      <p>Optimizing your website and content to drive online customer traffic and engagement, then keeping it compounding over time.</p>
+      <p class="dim" style="margin-top:14px;font-size:13px">Technical SEO · Content strategy · Local search · Reporting</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="container">
+  <h2 class="display">Which spark do you<br/>want to light?</h2>
+  <a class="btn" href="contact.html">Start a project →</a>
+</div></section>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div class="foot-brand"><div class="display grad-text">Wildfire</div><p class="muted" style="max-width:36ch">Full of ideas, not egos. A full-service creative agency in Winston-Salem &amp; Richmond.</p></div>
+    <div class="foot-col"><h4>Explore</h4><a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a></div>
+    <div class="foot-col"><h4>Offices</h4><a href="contact.html">Winston-Salem, NC</a><a href="contact.html">Richmond, VA</a><a href="tel:3367773473">336.777.FIRE</a><a href="contact.html">Start a project →</a></div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Wildfire, LLC · Concept redesign</span><span>Winston-Salem · Richmond</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var mb=document.querySelector('.menu-btn');
+  if(mb)mb.addEventListener('click',function(){document.body.classList.toggle('menu-open');mb.textContent=document.body.classList.contains('menu-open')?'Close':'Menu';});
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');if(mb)mb.textContent='Menu';});});
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

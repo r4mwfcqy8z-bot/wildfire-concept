@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Culture — Wildfire</title>
+<meta name="robots" content="noindex"/>
+<meta name="description" content="A community of thinkers and doers. Full of ideas, not egos."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="ribbon">Concept redesign for <b>Wildfire</b> — a proposed direction. Not the current wildfireideas.com.</div>
+<header class="nav"><div class="container">
+  <a class="brand" href="index.html"><span class="spark"></span>Wildfire</a>
+  <nav class="nav-links">
+    <a href="work.html">Work</a>
+    <a href="services.html">Services</a>
+    <a href="culture.html" class="active">Culture</a>
+    <a href="careers.html">Careers</a>
+    <a href="news.html">News</a>
+  </nav>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+  <button class="menu-btn" aria-label="Open menu">Menu</button>
+</div></header>
+<div class="mobile-nav">
+  <a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a>
+  <a class="btn btn-fire" href="contact.html">Start a project</a>
+</div>
+
+<section class="phero"><div class="container">
+  <span class="eyebrow">Who we are</span>
+  <h1 class="display">Thinkers<br/><span class="grad-text">and doers.</span></h1>
+  <p>We're a community of curious people who believe the best idea should win, no matter who it comes from. That belief shapes how we hire, how we work, and how we show up for each other.</p>
+</div></section>
+
+<section class="section" style="padding-top:20px"><div class="container">
+  <p class="lead reveal" style="max-width:840px">"Full of ideas, not egos" isn't a tagline we hang on the wall. It's the rule that decides which idea ships, who gets the credit, and how we treat the people we build brands with.</p>
+  <div class="values" style="margin-top:52px">
+    <div class="value reveal"><div class="k">IDEAS FIRST</div><h3>The best idea wins</h3><p>Titles don't decide the work. The sharpest thinking in the room does, and everyone is invited to bring it.</p></div>
+    <div class="value reveal"><div class="k">PARTNERSHIP</div><h3>On your side of the table</h3><p>We act like partners, not vendors. Your goals become ours, and we stay accountable to the outcome.</p></div>
+    <div class="value reveal"><div class="k">CURIOSITY</div><h3>Dig for the real insight</h3><p>We keep asking questions until we find the human truth that makes the whole idea click.</p></div>
+  </div>
+</div></section>
+
+<section class="section" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="container">
+  <div class="section-head reveal"><span class="eyebrow">Life at Wildfire</span><h2>Two cities. One community.</h2></div>
+  <div class="stats">
+    <div class="stat reveal"><div class="n grad-text">2</div><div class="l">Studios, Winston-Salem &amp; Richmond</div></div>
+    <div class="stat reveal"><div class="n grad-text">6</div><div class="l">Disciplines learning from each other</div></div>
+    <div class="stat reveal"><div class="n grad-text">100%</div><div class="l">Of ideas heard, whoever brings them</div></div>
+    <div class="stat reveal"><div class="n grad-text">1</div><div class="l">Simple rule, no egos</div></div>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="container">
+  <h2 class="display">Like how we<br/>think?</h2>
+  <a class="btn" href="careers.html">See open roles →</a>
+</div></section>
+
+<footer><div class="container">
+  <div class="foot-grid">
+    <div class="foot-brand"><div class="display grad-text">Wildfire</div><p class="muted" style="max-width:36ch">Full of ideas, not egos. A full-service creative agency in Winston-Salem &amp; Richmond.</p></div>
+    <div class="foot-col"><h4>Explore</h4><a href="work.html">Work</a><a href="services.html">Services</a><a href="culture.html">Culture</a><a href="careers.html">Careers</a><a href="news.html">News</a></div>
+    <div class="foot-col"><h4>Offices</h4><a href="contact.html">Winston-Salem, NC</a><a href="contact.html">Richmond, VA</a><a href="tel:3367773473">336.777.FIRE</a><a href="contact.html">Start a project →</a></div>
+  </div>
+  <div class="foot-bot"><span>© 2026 Wildfire, LLC · Concept redesign</span><span>Winston-Salem · Richmond</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var mb=document.querySelector('.menu-btn');
+  if(mb)mb.addEventListener('click',function(){document.body.classList.toggle('menu-open');mb.textContent=document.body.classList.contains('menu-open')?'Close':'Menu';});
+  document.querySelectorAll('.mobile-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open');if(mb)mb.textContent='Menu';});});
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
